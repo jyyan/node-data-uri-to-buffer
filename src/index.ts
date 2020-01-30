@@ -35,7 +35,8 @@ function dataUriToBuffer(uri: string): dataUriToBuffer.MimeBuffer {
 		if (meta[i] === 'base64') {
 			base64 = true;
 		} else {
-			typeFull += `;${  meta[i]}`;
+            // typeFull += `;${  meta[i]}`;
+			typeFull += ';' + meta[i] ;
 			if (meta[i].indexOf('charset=') === 0) {
 				charset = meta[i].substring(8);
 			}
